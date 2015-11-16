@@ -1,7 +1,7 @@
 {
-  "name": "MotoApp",
-  "version": "1.0.0-rc.1",
-  "description": "Moto App",
+  "name": "ANSMobile",
+  "version": "1.0.0",
+  "description": "ANSMobile",
   "dependencies": {
     "bower-installer": "^1.2.0",
     "elementtree": "^0.1.6",

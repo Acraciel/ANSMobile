@@ -39,8 +39,7 @@ angular.route('security/identity/login', function(
 
         switch (loginType)
         {
-            case 'facebook':
-            case 'google':
+            case 'ingresar':
             case 'email':
                 email();
                 break;
