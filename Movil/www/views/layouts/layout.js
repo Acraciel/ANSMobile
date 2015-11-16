@@ -3,7 +3,8 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
     $state,
     $log,
     $Configuration,
-    $timeout
+    $timeout,
+    $Api
 )
 {
     //------------------------------------------------------------------------------------
@@ -13,23 +14,18 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
         menu:  [
         {
             route: "app.home",
-            icon: "ion-ios-speedometer-outline",
+            icon: " ion-home",
             label: "Inicio",
             active: true
         },
         {
-            route: "app.routes/list",
-            icon: "ion-ios-location-outline",
-            label: "Rutas"
-        },
-        {
             route: "app.profile",
-            icon: "ion-ios-person-outline",
-            label: "Mi Perfil"
+            icon: "ion-ios-person",
+            label: "Perfil"
         },
         {
             route: "app.notifications",
-            icon: "ion-ios-bell-outline",
+            icon: "ion-ios-bell",
             label: "Notificaciones"
         }, ]
     };
@@ -53,4 +49,12 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
             $state.go(item.route);
         }, 300);
     };
+
+    // Get Data
+    $Api.read("/Profile").success(function(data)
+    {
+        //Set Profile
+        $scope.profile = data;
+
+    });
 });

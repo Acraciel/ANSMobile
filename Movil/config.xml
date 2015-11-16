@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.vlabs.motoapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>MotoApp</name>
+  <name>ANSMobilApp</name>
   <description>
-            MotoApp
+            ANSMobilApp
         </description>
   <author email="contacto@valentys.com" href="http://www.valentys.com/">
-            Valentys Dev Team
+            Rodrigo Rojas S.
         </author>
   <content src="index.html"/>
   <access origin="*"/>
