@@ -8,22 +8,11 @@ angular.module('mocks.api')
 
         var result = {
             timestamp: new Date().toISOString(),
-            image: "bundles/mocks/css/images/dmunoz.jpg",
-            name: "David Muñoz Gaete",
-            resume:
-            {
-                distance:
-                {
-                    total: 1200,
-                    average: 200
-                }
-            },
-            type:
-            {
-                name: "Motocross"
-            },
-            followers: 40,
-            following: 20
+            image: "bundles/mocks/css/images/user.png",
+            name: "John Doe",
+            direccion: "Vlakirias #215",
+            email: "JDoe@correo.cl",
+            rol: "Administrador"
         }
 
         return [

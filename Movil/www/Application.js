@@ -24,8 +24,8 @@
     {
         //Mocking Module (While the API is in Construction)
         mockProvider
-            .enable()
-            .setDelay(700); //Simulate a Short Delay ^^, (More 'Real' experience)
+        .enable()
+        .setDelay(700); //Simulate a Short Delay ^^, (More 'Real' experience)
     })
     
     .config(function(CONFIGURATION)
@@ -41,7 +41,7 @@
     .config(function($ApiProvider)
     {
         //API Base Endpoint
-        var API_ENDPOINT = 'http://valentys.motoApp.com/API/v1';
+        var API_ENDPOINT = 'http://ansmobil.com/API/v1';
         $ApiProvider.setEndpoint(API_ENDPOINT);
     })
     .config(function($IdentityProvider)

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Danilo Velasquez\Desktop\MotoApp-1.0.0-beta.3\Movil\platforms\android\CordovaLib\assets"/></dataSet><dataSet config="debug"><source path="C:\Users\Danilo Velasquez\Desktop\MotoApp-1.0.0-beta.3\Movil\platforms\android\CordovaLib\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\ANSMobile\Movil\platforms\android\CordovaLib\assets"/></dataSet><dataSet config="debug"><source path="C:\ANSMobile\Movil\platforms\android\CordovaLib\src\debug\assets"/></dataSet></merger>
