@@ -6,15 +6,25 @@
     <div class="legend">
         
     </div>
-    <!-- BUTTON'S -->
-    <div class="buttons">
-        <button class="button button-block" ng-click="login('ingresar')">       
-            <i class="icon ion-android-walk"></i>
-            <span>Ingresar</span>
-        </button>
-        <!-- NO-SOCIAL REGISTER -->
-        <div class="register">
-            Registrarme con el <a ng-click="login('email')">Email</a>
+    <form name="loginForm" novalidate>
+        <div>
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input name ="name" type="text" ng-model="user.name" required>
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input name ="password" type="password" ng-model="user.password" required>
+            </label>
+
         </div>
-    </div>
+        <!-- BUTTON'S -->
+        <div class="buttons">
+            <button class="button button-block" ng-click="login('ingresar')" ng-disabled="loginForm.$invalid">       
+                <i class="icon ion-android-walk"></i>
+                <span>Ingresar</span>
+            </button>
+        </div>
+    </form>
 </ion-view>

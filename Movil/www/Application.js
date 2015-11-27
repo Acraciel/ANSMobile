@@ -10,7 +10,7 @@
 
         , 'ngIOS9UIWebViewPatch' //IOS 9 FICKLERING PATCH (https://gist.github.com/IgorMinar/863acd413e3925bf282c)
     ])
-    .run(function($location, $Configuration, $log)
+    .run(function($location, $Configuration, $log,$Identity)
     {
         var application = $Configuration.get("application");
         $log.info("application start... ;)!",
@@ -18,7 +18,12 @@
             env: application.environment,
             version: application.version
         });
-        $location.url("boot");
+        if($Identity.isAuthenticated() ){
+            $location.url("boot");
+        }else{
+            $location.url("security/identity/login");
+        }
+        
     })
     .config(function(mockProvider)
     {
