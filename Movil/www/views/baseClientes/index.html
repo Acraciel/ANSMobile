@@ -1,0 +1,40 @@
+<ion-view cache-view="false" title="" class="constar">
+    <!-- LOADING -->
+    <flex-loading ng-if="!polizas" title="Constar" legend="Cargando...">
+    </flex-loading>
+    <!--CONTENT -->
+    <div ng-if="polizas">
+        <ion-content>
+            <div class="module-title">
+                <h1>Base Clientes</h1>
+                <h2>Resultado</h2>
+            </div>
+
+            <div class="list">
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Nombre</span>
+                <input type="text" ng-model="elem.nombre" placeholder="John alesu">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Razón Social</span>
+                <input type="text" ng-model="elem.razonSocial" placeholder="John alesu">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Número de Contacto</span>
+                <input type="text" ng-model="elem.numeroContacto" placeholder="+569 9 84152623">
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">E-mail</span>
+                <input type="text" ng-model="elem.Email" placeholder="correo@correo.com">
+              </label>
+            </div>
+
+            <button class="button button-light" ng-click="back()">
+              VOLVER
+            </button> 
+            <button class="button button-royal" ng-click="next(elem)">
+              PÓLIZAS ÚLTIMOS 24 MESES
+            </button>     
+        </ion-content>
+    </div>
+</ion-view>

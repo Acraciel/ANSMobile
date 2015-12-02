@@ -8,12 +8,15 @@
                 </button>
             </ion-nav-buttons>
     
-            <!-- RIGHT BUTTON'S -->
+            <!-- RIGHT BUTTON'S -->            
             <ion-nav-buttons side="right">
+                <button class="button button-icon ion-android-person profile" ui-sref="app.profile">
+                </button>
+                <!--
                 <button class="button button-icon ion-android-notifications notification" ui-sref="app.notifications">
                     <span class="badge badge-assertive">2</span>
-                </button>
-            </ion-nav-buttons>
+                </button>-->
+            </ion-nav-buttons>            
         </ion-nav-bar>
         <!-- CONTENT -->
         <ion-nav-view name="content"></ion-nav-view>
@@ -21,32 +24,13 @@
     <ion-side-menu side="left">
         <!-- MENU CONTENT -->
         <ion-content>
-            <center class="profile-bubble">
-                <div class="marker">
-                    <div class="halo">
-                        <div>
-                            <img ng-src="{{profile.image}}" />
-                        </div>
-                    </div>
-                </div>
-                <div class="name">
-                    {{ profile.name }}
-                </div>
-                <div class="description">
-                    {{ profile.rol }}
-                </div>
-            </center>
-            <br />
+        <h3>Menú</h3>
             <ion-list>
                 <ion-item nav-clear menu-toggle="left" ng-repeat="item in config.menu" ng-click="navigateTo(item)" ng-class="{'active': item.active}">
-                    <i class="icon {{item.icon}}"></i>
+                    <i class="icon ion-chatbubble"></i>
                     <span>{{item.label}}</span>
                 </ion-item>
             </ion-list>
         </ion-content>
-        <!-- FOOTER -->
-        <ion-footer-bar>
-            v{{config.application.version}}
-        </ion-footer-bar>
     </ion-side-menu>
 </ion-side-menus>

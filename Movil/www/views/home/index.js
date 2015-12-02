@@ -25,46 +25,12 @@ angular.route('app.home/index', function(
     });
     //----------------------------------------
 
-    //----------------------------------------
-    // Charts Data
-    //  http://jtblin.github.io/angular-chart.js/
-    //  http://www.chartjs.org/docs/
-    var drawGraph = function(data)
-    {
-        var labels = [];
-        var values = [];
-
-        angular.forEach(data.graph, function(item)
-        {
-            labels.push(item.label);
-            values.push(item.value);
-        });
-
-        $scope.graph = {
-            labels: labels,
-            series: ['Stats'],
-            colours: ["#493C2A"],
-            options:
-            {
-                showTooltips: false
-            },
-            onClick: function(points, evt)
-            {
-                console.log(points, evt);
-            },
-            values: [
-                values
-            ]
-        };
-
-    };
 
     //---------------------------------------------------
     // Get Data
     $Api.read("/Dashboard").success(function(data)
     {
         //Set Items to List
-        drawGraph(data);
         $scope.dashboard = data;
 
     });
@@ -74,18 +40,5 @@ angular.route('app.home/index', function(
     $scope.create = function()
     {
         $state.go("nomenu.routes/create/start");
-    };
-
-
-    //----------------------------------------
-    //Menu buttons home redirection
-    $scope.menu = function(item)
-    {
-        $timeout(function()
-        {
-            $state.go("app."+item);
-        }, 300);
-
-        //$state.go("app.cotizar");
     };
 });

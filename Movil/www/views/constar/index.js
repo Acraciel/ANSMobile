@@ -1,4 +1,4 @@
-angular.route('app.cotizar/index', function(
+angular.route('app.constar/index', function(
     $scope,
     $state,
     $log,
@@ -8,10 +8,10 @@ angular.route('app.cotizar/index', function(
 
     //---------------------------------------------------
     // Get Data
-    $Api.read("/Cotizar").success(function(data)
+    $Api.read("/Polizas").success(function(data)
     {
         //Set Items to List
-        $scope.cotizar = data;
+        $scope.polizas = data;
 
     });
 });

@@ -14,20 +14,46 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
         menu:  [
         {
             route: "app.home",
-            icon: " ion-home",
+            icon:  "",
             label: "Inicio",
             active: true
         },
         {
-            route: "app.profile",
-            icon: "ion-ios-person",
-            label: "Perfil"
+            route: "app.consultarPoliza",
+            icon: "",
+            label: "Consultar Pólizas"
         },
         {
+            route: "app.consultarSimulaciones",
+            icon: "",
+            label: "Consultar Simulaciones"
+        }, 
+        {
+            route: "app.consultarCliente",
+            icon: "",
+            label: "Clientes"
+        }, 
+        {
+            route: "app.simulaciones",
+            icon: "",
+            label: "Simulaciones"
+        }, 
+        {
+            route: "app.emitir",
+            icon: "",
+            label: "Emitir"
+        }, 
+        {
             route: "app.notifications",
-            icon: "ion-ios-bell",
+            icon: "",
             label: "Notificaciones"
-        }, ]
+        }, 
+        {
+            route: "app.miEjecutivo",
+            icon: "",
+            label: "Mi Ejecutivo"
+        }
+        ]
     };
 
     //------------------------------------------------------------------------------------
