@@ -6,7 +6,7 @@ angular.module('mocks.api')
     mock.whenPOST("/Security/Authorize", function(method, url, data)
     {
         var object = JSON.parse(data);
-        if (object.username == "rrojas@valentys.com")
+        if (object.username == "admin")
         {
             var result = {
                 "expires_in": 1000000,
@@ -23,7 +23,7 @@ angular.module('mocks.api')
         {
             return [
                 500,
-                {error_description :"Usuario no admitido"},
+                {error_description :"Tu nombre de usuario y/o contraseña es incorrecto"},
                 {}
             ];
         }

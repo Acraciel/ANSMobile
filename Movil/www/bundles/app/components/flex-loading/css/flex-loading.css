@@ -7,14 +7,14 @@ flex-loading {
   flex-direction: column;
   text-align: center; }
   flex-loading .spinner {
-    stroke: #ffc107;
-    fill: #ffc107; }
+    stroke: #8103B3;
+    fill: #8103B3; }
     flex-loading .spinner svg {
-      stroke: #ffc107; }
+      stroke: #8103B3; }
       flex-loading .spinner svg .stop1 {
-        stop-color: #ffc107; }
+        stop-color: #8103B3; }
       flex-loading .spinner svg .stop2 {
-        stop-color: #ffc107; }
+        stop-color: #8103B3; }
   flex-loading > .message {
     font-size: 1.2em;
     opacity: 0.5; }

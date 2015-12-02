@@ -75,4 +75,17 @@ angular.route('app.home/index', function(
     {
         $state.go("nomenu.routes/create/start");
     };
+
+
+    //----------------------------------------
+    //Menu buttons home redirection
+    $scope.menu = function(item)
+    {
+        $timeout(function()
+        {
+            $state.go("app."+item);
+        }, 300);
+
+        //$state.go("app.cotizar");
+    };
 });

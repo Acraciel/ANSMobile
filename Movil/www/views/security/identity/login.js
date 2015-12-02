@@ -38,7 +38,7 @@ angular.route('security/identity/login', function(
                     }
 
                    var alertPopup = $ionicPopup.alert({
-                     title: 'Error de login',
+                     title: 'Acceso Denegado',
                      template: error_message
                    });
                    alertPopup.then(function(res) {
