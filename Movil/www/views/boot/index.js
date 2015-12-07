@@ -4,19 +4,20 @@ angular.route('boot/index', function(
     $log,
     $Api,
     $Configuration,
-    $location
-)
-{
+    $location,
+    $timeout
+) {
     //---------------------------------------------------
     // Get Data
-    $Api.read("/Configuration/State").success(function(data)
-    {
-        if (data.state == "sync")
-        {
+    $Api.read("/Configuration/State").success(function(data) {
+        if (data.state == "sync") {
             var url = $Configuration.get("application");
-            $location.url(url.home);
+            $timeout(function() {
+                $location.url(url.home);
+            }, 2500);
+
         }
-        
+
     });
 
 });
