@@ -1,30 +1,24 @@
 <ion-view class="security login">
-    <!-- HEADER -->
-    <div class="title">
-        ANSMobile
-    </div>
-    <div class="legend">
-        
-    </div>
-    <form name="loginForm" novalidate>
-        <div>
-            <label class="item item-input">
-              <span class="input-label">Username</span>
-              <input name ="name" type="text" ng-model="user.name" required>
-            </label>
+    <center>
+        <logo class="login"></logo>
+        <form name="loginForm" novalidate>
+            <div class="list list-inset">
+                <label class="item item-input">
+                  <input name ="name" type="text" ng-model="user.name" placeholder="User" required>
+                </label>
 
-            <label class="item item-input">
-              <span class="input-label">Password</span>
-              <input name ="password" type="password" ng-model="user.password" required>
-            </label>
+                <label class="item item-input">
+                  <input name ="password" type="password" ng-model="user.password" placeholder="Password" required>
+                </label>
 
-        </div>
-        <!-- BUTTON'S -->
-        <div class="buttons">
-            <button class="button button-block" ng-click="login('ingresar')" ng-disabled="loginForm.$invalid">       
-                <i class="icon ion-android-walk"></i>
-                <span>Ingresar</span>
-            </button>
-        </div>
-    </form>
+            </div>
+            <!-- BUTTON'S -->
+            <div class="buttons">
+                <button class="button" ng-click="login('ingresar')" ng-disabled="loginForm.$invalid">       
+                    <i class="icon ion-android-walk"></i>
+                    <span>Ingresar</span>
+                </button>
+            </div>
+        </form>
+    </center>
 </ion-view>

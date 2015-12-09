@@ -403,6 +403,21 @@
             }
         }
     }
+    /*------------------------- 
+    VIEW:   Login page
+    ROUTE:  /app/security/identity
+    -------------------------*/
+    .login {
+        >center {
+            >form {
+                >div {
+                    >button {
+                        width: 15.3em;
+                    }
+                }
+            }
+        }
+    }
     // Personalized View
     logo {
         background-image: url(../css/images/ans-logo.jpg);
@@ -411,5 +426,14 @@
         width: 6em;
         margin-bottom: 1em;
         background-repeat: no-repeat;
+        &.header {
+            background-image: url(../css/images/ans-logo-header.png);
+        }
+        &.login {
+            display: block;
+            margin-top: 4em;
+            height: 7em;
+            width: 16em;
+        }
     }
 }
