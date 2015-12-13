@@ -2,20 +2,15 @@
     <center>
         <logo class="login"></logo>
         <form name="loginForm" novalidate>
-            <div class="list list-inset">
-                <label class="item item-input">
-                  <input name ="name" type="text" ng-model="user.name" placeholder="User" required>
-                </label>
-
-                <label class="item item-input">
-                  <input name ="password" type="password" ng-model="user.password" placeholder="Password" required>
-                </label>
+            <div class="list">
+            
+                <ion-md-input placeholder="Usuario" highlight-color="balanced" type="text" ng-model="user.name" required></ion-md-input>
+                <ion-md-input placeholder="Contraseña" highlight-color="energized" type="password" ng-model="user.password" required></ion-md-input>
 
             </div>
             <!-- BUTTON'S -->
             <div class="buttons">
                 <button class="button" ng-click="login('ingresar')" ng-disabled="loginForm.$invalid">       
-                    <i class="icon ion-android-walk"></i>
                     <span>Ingresar</span>
                 </button>
             </div>

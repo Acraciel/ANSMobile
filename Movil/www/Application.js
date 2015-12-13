@@ -9,6 +9,9 @@
         , 'mocks' //Mocks Only for Testing, Remove in PRD
 
         , 'ngIOS9UIWebViewPatch' //IOS 9 FICKLERING PATCH (https://gist.github.com/IgorMinar/863acd413e3925bf282c)
+        
+        , 'ionic-material' //Material for ionic Alpha
+        , 'ionMdInput' //Input Type Material for Ionic
     ])
     .run(function($location, $Configuration, $log,$Identity)
     {

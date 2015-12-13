@@ -4,6 +4,7 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
     $log,
     $Configuration,
     $timeout,
+    $Identity,
     $Api
 )
 {
@@ -75,7 +76,11 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
             $state.go(item.route);
         }, 300);
     };
-
+    // Action's
+    $scope.logOut = function()
+    {
+        $Identity.logOut();
+    };
     // Get Data
     $Api.read("/Profile").success(function(data)
     {
@@ -83,4 +88,5 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
         $scope.profile = data;
 
     });
+
 });

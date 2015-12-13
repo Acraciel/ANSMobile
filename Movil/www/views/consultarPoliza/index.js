@@ -23,7 +23,7 @@ angular.route('app.consultarPoliza/index', function(
         // Navigate
         $timeout(function()
         {
-            $state.go('app.constar');
+            $state.go('app.consultarPoliza/constar');
         }, 300);
     };
 

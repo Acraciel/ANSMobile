@@ -23,7 +23,7 @@ angular.route('app.consultarCliente/index', function(
         // Navigate
         $timeout(function()
         {
-            $state.go('app.baseClientes');
+            $state.go('app.consultarCliente/baseClientes');
         }, 300);
     };
 
