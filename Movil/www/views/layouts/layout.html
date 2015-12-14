@@ -31,6 +31,10 @@
                 <div class="rol">
                     {{profile.rol}}
                 </div>
+                <button class="button button-block" ng-click="logOut();">
+                    <i class="icon ion-android-exit"></i>
+                    <span>Cerrar Sesión</span>
+                </button>
             </center>
             <br />
             <ion-list>
@@ -40,13 +44,5 @@
                 </ion-item>
             </ion-list>
         </ion-content>
-        <!-- FOOTER -->
-        <ion-footer-bar>
-            <!-- CLOSE SESSION -->
-            <button class="close-session button button-block" ng-click="logOut();">
-                <i class="icon ion-android-exit"></i>
-                <span>Cerrar Sesión</span>
-            </button>
-        </ion-footer-bar>
     </ion-side-menu>
 </ion-side-menus>

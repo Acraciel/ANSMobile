@@ -6,26 +6,23 @@ angular.route('app.consultarPoliza/index', function(
     $Api
 )
 {
-    
+    $scope.formulario = {};
 
     //---------------------------------------------------
     // Get Data
     $Api.read("/Cotizar").success(function(data)
     {
         //Set Items to List
-        $scope.cotizar = data;
-
+        $scope.productos = data.productos;
     });
 
     // Layout Actions
-    $scope.navigateTo = function()
+    $scope.navigateTo = function(elem)
     {
         // Navigate
         $timeout(function()
         {
-            $state.go('app.consultarPoliza/constar');
+            $state.go('app.consultarPoliza/constar/index',{estado:elem.estado});
         }, 300);
     };
-
-
 });

@@ -10,25 +10,41 @@ angular.module('mocks.api')
                 numeroPoliza: "1234",
                 nombreAsegurado: "Juan",
                 linkPdf: "",
-                ramo: "Vehículo Liviano"
+                ramo: "Vehículo Liviano",
+                tipo: "Online",
+                estado: "Emitida",
+                vigencia: "1 Año",
+                materia: "---"
                 },
                 {
                 numeroPoliza: "6547",
                 nombreAsegurado: "Alfredo",
                 linkPdf: "",
-                ramo: "Vehículo Liviano"
+                ramo: "Vehículo Liviano",
+                tipo: "Online",
+                estado: "Emitida",
+                vigencia: "1 Año",
+                materia: "---"
                 },
                 {
                 numeroPoliza: "7415",
                 nombreAsegurado: "Julian",
                 linkPdf: "",
-                ramo: "Vehículo Liviano"
+                ramo: "Vehículo Liviano",
+                tipo: "Online",
+                estado: "Emitida",
+                vigencia: "1 Año",
+                materia: "---"
                 },
                 {
                 numeroPoliza: "9856",
                 nombreAsegurado: "Ignacio",
                 linkPdf: "",
-                ramo: "Vehículo Liviano"
+                ramo: "Vehículo Liviano",
+                tipo: "Online",
+                estado: "En digitación",
+                vigencia: "1 Año",
+                materia: "---"            
                 }
             ];
 

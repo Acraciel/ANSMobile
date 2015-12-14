@@ -11,30 +11,30 @@
             </div>
 
             <div class="list">
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">Nombre</span>
-                <input type="text" ng-model="elem.nombre" placeholder="John alesu">
+              <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
+                  <input type="text" placeholder="RUT"> 
               </label>
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">Razón Social</span>
-                <input type="text" ng-model="elem.razonSocial" placeholder="John alesu">
+              <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
+                  <input type="text" ng-model="elem.nombre" placeholder="Nombre / Razón Social"> 
               </label>
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">Número de Contacto</span>
-                <input type="text" ng-model="elem.numeroContacto" placeholder="+569 9 84152623">
+              <label class="item item-input item-floating-label"> <span class="input-label">Número de Contacto</span>
+                  <input type="text" ng-model="elem.numeroContacto" placeholder="Número de Contacto"> 
               </label>
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">E-mail</span>
-                <input type="text" ng-model="elem.Email" placeholder="correo@correo.com">
+              <label class="item item-input item-floating-label"> <span class="input-label">E-mail</span>
+                  <input type="text" ng-model="elem.Email" placeholder="E-mail"> 
               </label>
             </div>
-
-            <button class="button button-light" ng-click="back()">
-              VOLVER
-            </button> 
-            <button class="button button-royal" ng-click="next(elem)">
-              PÓLIZAS ÚLTIMOS 24 MESES
-            </button>     
+            
+               
         </ion-content>
+        <!-- FOOTER -->
+        <ion-footer-bar>
+          <button class="button icon-left button-light ion-chevron-left" ng-click="back()">
+            VOLVER
+          </button> 
+          <button class="button icon-right ion-chevron-right button-royal" ng-click="next(elem)">
+            PÓLIZAS ÚLTIMOS 24 MESES
+          </button>  
+        </ion-footer-bar>
     </div>
 </ion-view>

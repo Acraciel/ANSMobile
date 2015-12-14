@@ -91,11 +91,11 @@
     background: #FFFFFF; }
   [md-theme='ans'] ion-header-bar {
     background-color: #FFFFFF;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
     [md-theme='ans'] ion-header-bar button {
       color: #484848 !important; }
     [md-theme='ans'] ion-header-bar .title {
-      margin-left: 0px;
+      margin-left: -20px;
       color: #DF9443; }
     [md-theme='ans'] ion-header-bar button.notification {
       margin-top: -1px; }
@@ -108,10 +108,11 @@
   [md-theme='ans'] .has-footer {
     bottom: 60px; }
   [md-theme='ans'] ion-footer-bar {
-    padding: 0px;
-    height: 60px;
+    padding: 10px;
+    height: 65px;
     background-image: none;
     background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     /*Sobre escribe clase de Material ionic*/ }
     [md-theme='ans'] ion-footer-bar > .button {
       min-width: 190px; }
@@ -121,7 +122,7 @@
       background: none;
       background-color: #FFFFFF;
       border-color: #FFFFFF;
-      margin: 0px;
+      margin: 0em 7em;
       text-transform: uppercase;
       font-size: 0.73em;
       border-radius: 0px; }
@@ -145,6 +146,8 @@
         color: #DF9443; }
       [md-theme='ans'] ion-side-menu ion-content .profile-menu div.rol {
         color: #7B3BA8; }
+      [md-theme='ans'] ion-side-menu ion-content .profile-menu button {
+        font-size: 11px; }
     [md-theme='ans'] ion-side-menu ion-content ion-list ion-item {
       background-color: transparent;
       border: #fff;

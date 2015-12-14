@@ -17,6 +17,5 @@
   },
   "_source": "git://github.com/azaslavsky/angular-ios9-uiwebview-patch.git",
   "_target": "~1.1.1",
-  "_originalSource": "angular-ios9-uiwebview-patch",
-  "_direct": true
+  "_originalSource": "angular-ios9-uiwebview-patch"
 }

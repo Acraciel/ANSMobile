@@ -15,8 +15,8 @@
     "angular-ios9-uiwebview-patch": "~1.1.1",
     "ionic-toast": "0.1.1",
     "angular-moment": "~0.10.3",
-    "ionic-material": "~0.4.2",
-    "ion-md-input": "~1.0.4"
-
+    "ion-md-input": "~1.0.4",
+    "ionic-material": "~0.4.2"
+    
   }
 }

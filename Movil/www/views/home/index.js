@@ -6,7 +6,7 @@ angular.route('app.home/index', function(
     $interval,
     $timeout,
     $Identity,
-    $ionicNavBarDelegate
+    $ionicNavBarDelegate    
 
 )
 {
@@ -17,7 +17,7 @@ angular.route('app.home/index', function(
     {
         $ionicNavBarDelegate.align("left");
         $ionicNavBarDelegate.showBar(true);
-
+        
     }, 350);
     $scope.$on("$destroy", function()
     {

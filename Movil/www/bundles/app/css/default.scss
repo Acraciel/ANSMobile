@@ -117,12 +117,12 @@
     ion-header-bar {
         background-color: $accent_color;
         //background-image: none;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         button {
             color: $text_color !important;
         }
         .title {
-            margin-left: 0px;
+            margin-left: -20px;
             color: $title_color;
         }
         button.notification {
@@ -144,10 +144,11 @@
         bottom: 60px;
     }
     ion-footer-bar {
-        padding: 0px;
-        height: 60px;
+        padding: 10px;
+        height: 65px;
         background-image: none;
         background: $primary_color;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
         /*Sobre escribe clase de Material ionic*/
         >.button {
             min-width: 190px;
@@ -158,7 +159,7 @@
             background: none;
             background-color: $accent_color;
             border-color: $accent_color;
-            margin: 0px;
+            margin: 0em 7em;
             text-transform: uppercase;
             font-size: 0.73em;
             border-radius: 0px;
@@ -170,7 +171,6 @@
             @extend .grayscale;
         }
     }
-    
     /*-------------------------
         CONTENT
      -------------------------*/
@@ -201,6 +201,9 @@
                 }
                 div.rol {
                     color: $special_text_color;
+                }
+                button {
+                    font-size: 11px;
                 }
             }
             ion-list {

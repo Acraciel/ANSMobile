@@ -1,15 +1,12 @@
-<ion-view title="" class="constar">
+<ion-view title="Pólizas" class="constar">
     <!-- LOADING -->
-    <flex-loading ng-if="!polizas" title="Constar" legend="Cargando...">
+    <flex-loading ng-if="!polizas" title="Polizas" legend="Cargando Listado...">
     </flex-loading>
     <!--CONTENT -->
     <div ng-if="polizas">
         <ion-content>
-            <div class="module-title">
-                <h1>Constar</h1>
-            </div>
-           <div ng-repeat="poliza in polizas">
-            <div class="panel">
+           <div ng-repeat="poliza in polizas">            
+            <div class="panel" ng-if="poliza.estado == elem.estado">
                 <div class="panel-head">
                     Nº{{poliza.numeroPoliza}}
                 </div>
@@ -24,6 +21,30 @@
                         <span>Ramo</span>
                         <div class="content">
                             {{poliza.ramo}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Tipo Póliza</span>
+                        <div class="content">
+                            {{poliza.tipo}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Estado</span>
+                        <div class="content">
+                            {{poliza.estado}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Fin Vigencia</span>
+                        <div class="content">
+                            {{poliza.vigencia}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Materia Asegurada</span>
+                        <div class="content">
+                            {{poliza.materia}}
                         </div>
                     </label>
                 </div>
