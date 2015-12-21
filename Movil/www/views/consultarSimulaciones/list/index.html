@@ -1,0 +1,55 @@
+<ion-view title="Simulaciones" class="constar">
+    <!-- LOADING -->
+    <flex-loading ng-if="!simulacion" title="Simulaciones" legend="Cargando Listado...">
+    </flex-loading>
+    <!--CONTENT -->
+    <div ng-if="simulacion">
+        <ion-content>
+           <div ng-repeat="simula in simulacion">            
+            <div class="panel">
+                <div class="panel-head">
+                    Nº Simulación {{simula.numero}}
+                </div>
+
+                <div class="panel-body">
+                    <label>
+                        <span>Estado</span>
+                        <div class="content">
+                            {{simula.estado}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Fecha Simulación</span>
+                        <div class="content">
+                            {{simula.fecha}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Nombre Contratante</span>
+                        <div class="content">
+                            {{simula.nombreContratante}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Ramo</span>
+                        <div class="content">
+                            {{simula.ramo}}
+                        </div>
+                    </label>
+                    <label>
+                        <span>Materia Asegurada</span>
+                        <div class="content">
+                            {{simula.materia}}
+                        </div>
+                    </label>
+                </div>
+                <div class="panel-footer">
+                   <i class="icon ion-document"></i>
+                   <span>PDF</span>
+                </div>
+            </div>
+               
+           </div>
+        </ion-content>
+    </div>
+</ion-view>

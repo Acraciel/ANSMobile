@@ -1,4 +1,4 @@
-angular.route('app.emitir/index', function(
+angular.route('app.miEjecutivo/index', function(
     $scope,
     $state,
     $log,

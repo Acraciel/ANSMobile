@@ -35,7 +35,7 @@ angular.module('app.layouts').controller('DefaultLayoutController', function(
             label: "Clientes"
         }, 
         {
-            route: "app.simulaciones",
+            route: "app.simular",
             icon: "",
             label: "Simulaciones"
         }, 

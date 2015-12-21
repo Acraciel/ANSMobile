@@ -1,4 +1,4 @@
-angular.route('app.emitir/index', function(
+angular.route('app.consultarSimulaciones/index', function(
     $scope,
     $state,
     $log,
@@ -7,7 +7,7 @@ angular.route('app.emitir/index', function(
 )
 {
     
-
+    $scope.form = {};
     //---------------------------------------------------
     // Get Data
     $Api.read("/Cotizar").success(function(data)
@@ -23,7 +23,7 @@ angular.route('app.emitir/index', function(
         // Navigate
         $timeout(function()
         {
-            $state.go('app.consultarCliente/baseClientes');
+            $state.go('app.consultarSimulaciones/list');
         }, 300);
     };
 
