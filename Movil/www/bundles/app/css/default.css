@@ -98,7 +98,8 @@
       margin-left: -20px;
       color: #DF9443; }
     [md-theme='ans'] ion-header-bar button.notification {
-      margin-top: -1px; }
+      margin-top: -1px;
+      padding: 4px 15px 0px 0px; }
     [md-theme='ans'] ion-header-bar button.profile {
       margin-top: -1px; }
     [md-theme='ans'] ion-header-bar span.badge {
@@ -317,6 +318,25 @@
           padding-bottom: 0.7em;
           color: #484848;
           font-weight: bold; }
+        [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble {
+          padding-bottom: 0.5em; }
+          [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker {
+            width: 7em;
+            height: 7em; }
+            [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo {
+              border-radius: 10%;
+              border: 2px solid #c0c1c2;
+              width: 100%;
+              height: 100%;
+              padding: 5%; }
+              [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo > div {
+                border-radius: 50%;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+                background: #FFFFFF; }
+                [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo > div > img {
+                  width: 100%; }
       [md-theme='ans'] ion-view.pane.constar .panel .panel-footer {
         padding: 0.7em 0em 0.7em 0em;
         background-color: #fff;

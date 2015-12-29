@@ -2,30 +2,19 @@ angular.route('app.miEjecutivo/index', function(
     $scope,
     $state,
     $log,
-    $timeout,
-    $Api
+    $Api,
+    $stateParams
 )
 {
-    
-
+    $scope.elem = {
+        
+    };
     //---------------------------------------------------
     // Get Data
-    $Api.read("/Cotizar").success(function(data)
+    $Api.read("/Ejecutivos").success(function(data)
     {
         //Set Items to List
-        $scope.cotizar = data;
+        $scope.ejecutivos = data;
 
     });
-
-    // Layout Actions
-    $scope.navigateTo = function()
-    {
-        // Navigate
-        $timeout(function()
-        {
-            $state.go('app.consultarCliente/baseClientes');
-        }, 300);
-    };
-
-
 });

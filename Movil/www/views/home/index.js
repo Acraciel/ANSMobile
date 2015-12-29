@@ -6,8 +6,7 @@ angular.route('app.home/index', function(
     $interval,
     $timeout,
     $Identity,
-    $ionicNavBarDelegate    
-
+    $ionicNavBarDelegate
 )
 {
     //----------------------------------------
@@ -41,4 +40,5 @@ angular.route('app.home/index', function(
     {
         $state.go("nomenu.routes/create/start");
     };
+    //test();
 });

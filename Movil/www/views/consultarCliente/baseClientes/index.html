@@ -5,32 +5,41 @@
     <!--CONTENT -->
     <div ng-if="polizas">
         <ion-content>
-
             <div class="list">
-              <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
-                  <input type="text" placeholder="RUT"> 
-              </label>
-              <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
-                  <input type="text" ng-model="elem.nombre" placeholder="Nombre / Razón Social"> 
-              </label>
-              <label class="item item-input item-floating-label"> <span class="input-label">Número de Contacto</span>
-                  <input type="text" ng-model="elem.numeroContacto" placeholder="Número de Contacto"> 
-              </label>
-              <label class="item item-input item-floating-label"> <span class="input-label">E-mail</span>
-                  <input type="text" ng-model="elem.Email" placeholder="E-mail"> 
-              </label>
+                <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
+                    <input type="text" placeholder="RUT">
+                </label>
+                <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
+                    <input type="text" ng-model="elem.nombre" placeholder="Nombre / Razón Social">
+                </label>
+                <label class="item item-input item-floating-label"> <span class="input-label">Celular</span>
+                    <input type="number" ng-model="elem.celular" placeholder="Celular">
+                </label>
+                <label class="item item-input item-floating-label"> <span class="input-label">Teléfono Fijo</span>
+                    <input type="number" ng-model="elem.telefono" placeholder="Teléfono Fijo">
+                </label>
+                <label class="item item-input item-floating-label"> <span class="input-label">E-mail</span>
+                    <input type="email" ng-model="elem.Email" placeholder="E-mail">
+                </label>
             </div>
+            <button class="button icon-right ion-chevron-right button-royal button-block" ng-click="next(elem)">
+                PÓLIZAS ÚLTIMOS 24 MESES
+            </button>
+            <button class="button icon-left button-light ion-chevron-left button-block" ng-click="back()">
+                VOLVER
+            </button>
             
-               
         </ion-content>
         <!-- FOOTER -->
+        <!--
         <ion-footer-bar>
-          <button class="button icon-left button-light ion-chevron-left" ng-click="back()">
-            VOLVER
-          </button> 
-          <button class="button icon-right ion-chevron-right button-royal" ng-click="next(elem)">
-            PÓLIZAS ÚLTIMOS 24 MESES
-          </button>  
+            <button class="button icon-left button-light ion-chevron-left" ng-click="back()">
+                VOLVER
+            </button>
+            <button class="button icon-right ion-chevron-right button-royal" ng-click="next(elem)">
+                PÓLIZAS ÚLTIMOS 24 MESES
+            </button>
         </ion-footer-bar>
+      -->
     </div>
 </ion-view>

@@ -5,10 +5,10 @@ div.modal-backdrop-bg {
 }
 
 ion-modal-view.custoModal {
-    min-height: 45%;
+    min-height: 25em;
     width: 80%;
     margin-left: 10%;
-    margin-top: 50%;
+    margin-top: 25%;
     border-radius: 4px;
     overflow: visible;
     > center {
@@ -20,31 +20,31 @@ ion-modal-view.custoModal {
             text-transform: uppercase;
             font-weight: bold;
             padding-bottom: 0.1em;
+            padding-top: 2em;
             font-size: 1.2em;
+            color: #DF9443;
         }
-        > .points {
-            text-align: right;
-            font-weight: bold;
-            font-size: 0.9em;
-            padding-right: 0.5em;
-            margin-top: -1.7em;
-            color: #FFF;
+    }
+    > .formContent {
+        padding: 4em 0em 0em 2em;
+        >span {
+            font-size: 1.3em;
+            display: block;
+            color: #7B3BA8;
+            padding-top: 0.5em;
         }
-        > .text {
-            padding-bottom: 1em;
-        }
-        > .description {
-            padding: 1em;
-            > span {
-                font-size: 2.3em;
-                display: block;
-                color: $primary_color;
-                padding-top: 0.5em;
-            }
+        > .input-label {
+            padding: 7px 10px 7px 0px;
+            max-width: 200px;
+            width: 50%;
         }
     }
     > div.bar-footer {
         border-radius: 4px;
         color: #2370dc;
+        margin: 2em 1em 0em 1em;
+        > .button {
+            margin: 0.2em;
+        }
     }
 }

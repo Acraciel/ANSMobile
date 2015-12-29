@@ -1,18 +1,15 @@
 /*------------------------------------------------------
  Company:           Valentys Ltda.
- Author:            David Gaete <dmunozgaete@gmail.com> (https://github.com/dmunozgaete)
- 
- Description:       Synchronizer System to Sync to Some File
- Github:            http://ngcordova.com/docs/plugins/geolocation/
+ Author:            Rodrigo Rojas <acraciel@gmail.com> (https://github.com/acraciel)
 ------------------------------------------------------*/
 (function()
 {
     var closureScope = null;
     var modal = null;
 
-    //MODAL DIALOG (REWARDS)
+    //MODAL DIALOG
     angular.module('app.controllers')
-        .controller('RewardDialogController', function(
+        .controller('CustoModalDialogController', function(
             $scope,
             $state,
             $log,
@@ -20,63 +17,21 @@
             $ionicModal
         )
         {
-            $scope.data = closureScope.medals[0];
-
             //-------------------------------------------
-            // Model
-            $scope.close = function()
-            {
-
-                modal.hide();
-
-                //-------------------------------------------
-                //RAISE NEW LEVEL???
-                if (closureScope.details.level.up)
+            $scope.data = 
                 {
-                    var delay = $timeout(function(){
-
-                        //SHOW NEW LEVEL PANEL
-                        $ionicModal.fromTemplateUrl('views/rewards/raiseLevel.html',
-                        {
-                            animation: 'slide-in-up'
-                        }).then(function(modalDialog)
-                        {
-                            modal = modalDialog;
-                            modal.show();
-                        });
-
-                        $timeout.cancel(delay);
-
-                    }, 500);
-                }
-                //-------------------------------------------
-            };
-
-        });
-
-    //MODAL DIALOG (RAISE LEVEL)
-    angular.module('app.controllers')
-        .controller('RaiseLevelDialogController', function(
-            $scope,
-            $state,
-            $log
-        )
-        {
-
-            $scope.data = closureScope.details;
-
-            //-------------------------------------------
-            // Model
+                    email: closureScope.email
+                };
+            // Mode - Do Magic
             $scope.close = function()
             {
                 modal.hide();
             };
 
         });
-
     // SERVICE
     angular.module("app.services")
-        .provider('Rewards', function()
+        .provider('CustoModal', function()
         {
             var $ref = this;
 
@@ -91,38 +46,25 @@
                 var self = {};
 
                 //ADD NEW FACTORY
-                self.check = function(category)
+                self.open = function(emailUserDefault)
                 {
-
-                    //CHECK REWARDS! (CATEGORIZED)
-                    $Api.read("/Accounts/Me/NewMedals/{category}",
+                    //Open Modal
+                    if (emailUserDefault.length > 0)
+                    {
+                        closureScope = {
+                            email: emailUserDefault
+                        };
+                        //SHOW REWARD PANE
+                        $ionicModal.fromTemplateUrl('views/CustoModal/CustoModal.html',
                         {
-                            category: category
-                        })
-                        .success(function(rewards)
+                            animation: 'slide-in-up'
+                        }).then(function(modalDialog)
                         {
-                            $log.info(rewards);
-                            //------------------------------------------------
-                            //USER HAS WINNING SOMETHING???
-                            if (rewards.medals.length > 0)
-                            {
-                                closureScope = rewards;
-
-                                //SHOW REWARD PANE
-                                $ionicModal.fromTemplateUrl('views/rewards/reward.html',
-                                {
-                                    animation: 'slide-in-up'
-                                }).then(function(modalDialog)
-                                {
-                                    modal = modalDialog;
-                                    modal.show();
-                                });
-
-                            };
-                            //------------------------------------------------
-
+                            modal = modalDialog;
+                            modal.show();
                         });
 
+                    };
                 };
 
                 return self;

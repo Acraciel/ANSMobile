@@ -1,25 +1,17 @@
-<ion-modal-view ng-controller="RewardDialogController" class="custoModal">
+<ion-modal-view ng-controller="CustoModalDialogController" class="custoModal">
     <center>
-        <!-- POINTS -->
-        <div class="points">
-            {{data.points}} Pts
-        </div>
-        <!-- LOGO -->
-        <img src="bundles/app/css/images/medals/medal-active.png" />
         <!-- TITLE -->
         <div class="title">
-            {{data.name}}
-        </div>
-        <!-- TEXT -->
-        <div class="text">
-            Has ganado una nueva medalla
-        </div>
-        <!-- DESCRPIPTION -->
-        <div class="description">
-            {{data.description}}
+            Enviar pdf
         </div>
     </center>
-    <div class="bar bar-footer" ng-click="close();">
-        <div class="title">Cerrar</div>
+    <!-- FORM -->
+    <div class="formContent">
+        <span class="input-label">E-Mail Contratante</span>
+        <input type="text" value="{{data.email}}">
+    </div> 
+    <div class="bar-footer">
+        <button class="button button-block">Envíar</button>
+        <button class="button button-block" ng-click="close();">Cancelar</button>
     </div>
 </ion-modal-view>

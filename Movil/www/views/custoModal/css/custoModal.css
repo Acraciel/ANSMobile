@@ -20,10 +20,10 @@ div.modal-backdrop-bg {
   opacity: 0.7; }
 
 ion-modal-view.custoModal {
-  min-height: 45%;
+  min-height: 25em;
   width: 80%;
   margin-left: 10%;
-  margin-top: 50%;
+  margin-top: 25%;
   border-radius: 4px;
   overflow: visible; }
   ion-modal-view.custoModal > center > img {
@@ -33,25 +33,25 @@ ion-modal-view.custoModal {
     text-transform: uppercase;
     font-weight: bold;
     padding-bottom: 0.1em;
-    font-size: 1.2em; }
-  ion-modal-view.custoModal > center > .points {
-    text-align: right;
-    font-weight: bold;
-    font-size: 0.9em;
-    padding-right: 0.5em;
-    margin-top: -1.7em;
-    color: #FFF; }
-  ion-modal-view.custoModal > center > .text {
-    padding-bottom: 1em; }
-  ion-modal-view.custoModal > center > .description {
-    padding: 1em; }
-    ion-modal-view.custoModal > center > .description > span {
-      font-size: 2.3em;
+    padding-top: 2em;
+    font-size: 1.2em;
+    color: #DF9443; }
+  ion-modal-view.custoModal > .formContent {
+    padding: 4em 0em 0em 2em; }
+    ion-modal-view.custoModal > .formContent > span {
+      font-size: 1.3em;
       display: block;
-      color: #1c1c29;
+      color: #7B3BA8;
       padding-top: 0.5em; }
+    ion-modal-view.custoModal > .formContent > .input-label {
+      padding: 7px 10px 7px 0px;
+      max-width: 200px;
+      width: 50%; }
   ion-modal-view.custoModal > div.bar-footer {
     border-radius: 4px;
-    color: #2370dc; }
+    color: #2370dc;
+    margin: 2em 1em 0em 1em; }
+    ion-modal-view.custoModal > div.bar-footer > .button {
+      margin: 0.2em; }
 
 /*# sourceMappingURL=custoModal.css.map */

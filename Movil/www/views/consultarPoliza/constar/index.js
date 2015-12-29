@@ -3,7 +3,8 @@ angular.route('app.consultarPoliza/constar/index/:estado', function(
     $state,
     $log,
     $Api,
-    $stateParams
+    $stateParams,
+    CustoModal
 )
 {
     $scope.elem = {
@@ -17,4 +18,7 @@ angular.route('app.consultarPoliza/constar/index/:estado', function(
         $scope.polizas = data;
 
     });
+    $scope.pdf = function(persona){
+        CustoModal.open("correo@"+persona+".cl");
+    }
 });

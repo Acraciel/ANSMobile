@@ -1,21 +1,50 @@
-<ion-view title="Mi Ejecutivo">
+<ion-view title="Ejecutivos" class="constar">
     <!-- LOADING -->
-    <flex-loading ng-if="!cotizar" title="Consultar" legend="Preparando la consulta...">
+    <flex-loading ng-if="!ejecutivos" title="Ejecutivos" legend="Cargando Listado...">
     </flex-loading>
     <!--CONTENT -->
-    <div ng-if="cotizar">
+    <div ng-if="ejecutivos">
         <ion-content>
-            <form name="consultaForm" novalidate>
-                <div class="list">
-                    <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
-                        <input type="text" placeholder="RUT"> </label>
-                    <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
-                        <input type="text" placeholder="Nombre / Razón Social"> </label>
+            <div ng-repeat="ejecutivo in ejecutivos">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="profile-bubble">
+                            <div class="marker">
+                                <div class="halo">
+                                    <div>
+                                        <img ng-src="{{ejecutivo.image}}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label>
+                            <span>Nombre</span>
+                            <div class="content">
+                                {{ejecutivo.name}}
+                            </div>
+                        </label>
+                        <label>
+                            <span>Cargo</span>
+                            <div class="content">
+                                {{ejecutivo.cargo}}
+                            </div>
+                        </label>
+                        <label>
+                            <span>telefono</span>
+                            <div class="content">
+                                {{ejecutivo.telefono}}
+                            </div>
+                        </label>
+                        <label>
+                            <span>E-mail>
+                        <div class="content">
+                            {{ejecutivo.email}}
+                        </div>
+                    </label>
                 </div>
-            </form>
-            <button class="button button-calm button-block" ng-click="navigateTo()">
-                Aceptar
-            </button>
+            </div>
+               
+           </div>
         </ion-content>
     </div>
 </ion-view>

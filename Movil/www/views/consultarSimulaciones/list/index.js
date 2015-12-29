@@ -3,7 +3,8 @@ angular.route('app.consultarSimulaciones/list/index', function(
     $state,
     $log,
     $Api,
-    $stateParams
+    $stateParams,
+    CustoModal
 )
 {
     $scope.elem = {
@@ -17,4 +18,8 @@ angular.route('app.consultarSimulaciones/list/index', function(
         $scope.simulacion = data;
 
     });
+
+    $scope.pdf = function(numero){
+        CustoModal.open(numero+"@correo.cl");
+    }
 });
