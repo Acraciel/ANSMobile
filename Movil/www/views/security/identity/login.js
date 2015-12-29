@@ -4,21 +4,25 @@ angular.route('security/identity/login', function(
     $Localization,
     $state,
     $Identity,
-    $scope
+    $scope,
+    $ionicPopup
 )
 {
     //Application Information
     $scope.signature = $Configuration.get("application");
     $scope.user = {};
 
+
     $scope.login = function(loginType)
     {
         var email = function()
         {
+            
             var credentials = {
-                username: 'dmunoz@valentys.com',
-                password: 'MySuperClave'
+                username: $scope.user.name,
+                password: $scope.user.password
             };
+
 
             $Identity.authenticate(credentials)
                 .success(function(data)
@@ -33,7 +37,15 @@ angular.route('security/identity/login', function(
                         error_message = error.error_description;
                     }
 
-                   
+                   var alertPopup = $ionicPopup.alert({
+                     title: 'Acceso Denegado',
+                     template: error_message
+                   });
+                   alertPopup.then(function(res) {
+                  
+                   });
+
+ 
                 });
         };
 
@@ -44,6 +56,7 @@ angular.route('security/identity/login', function(
                 email();
                 break;
         }
+
 
     };
 

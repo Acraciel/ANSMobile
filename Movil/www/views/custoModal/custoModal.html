@@ -1,0 +1,17 @@
+<ion-modal-view ng-controller="CustoModalDialogController" class="custoModal">
+    <center>
+        <!-- TITLE -->
+        <div class="title">
+            Enviar pdf
+        </div>
+    </center>
+    <!-- FORM -->
+    <div class="formContent">
+        <span class="input-label">E-Mail Contratante</span>
+        <input type="text" value="{{data.email}}">
+    </div> 
+    <div class="bar-footer">
+        <button class="button button-block">Envíar</button>
+        <button class="button button-block" ng-click="close();">Cancelar</button>
+    </div>
+</ion-modal-view>

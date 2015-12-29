@@ -1,20 +1,19 @@
 <ion-view class="security login">
-    <!-- HEADER -->
-    <div class="title">
-        ANSMobile
-    </div>
-    <div class="legend">
-        
-    </div>
-    <!-- BUTTON'S -->
-    <div class="buttons">
-        <button class="button button-block" ng-click="login('ingresar')">       
-            <i class="icon ion-android-walk"></i>
-            <span>Ingresar</span>
-        </button>
-        <!-- NO-SOCIAL REGISTER -->
-        <div class="register">
-            Registrarme con el <a ng-click="login('email')">Email</a>
-        </div>
-    </div>
+    <center>
+        <logo class="login"></logo>
+        <form name="loginForm" novalidate>
+            <div class="list">
+            
+                <ion-md-input placeholder="USUARIO" highlight-color="balanced" type="text" ng-model="user.name" required></ion-md-input>
+                <ion-md-input placeholder="CONTRASEÑA" highlight-color="energized" type="password" ng-model="user.password" required></ion-md-input>
+
+            </div>
+            <!-- BUTTON'S -->
+            <div class="buttons">
+                <button class="button" ng-click="login('ingresar')" ng-disabled="loginForm.$invalid">       
+                    <span>Ingresar</span>
+                </button>
+            </div>
+        </form>
+    </center>
 </ion-view>

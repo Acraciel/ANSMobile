@@ -1,0 +1,34 @@
+<ion-view title="Consultar Pólizas">
+    <!-- LOADING -->
+    <flex-loading ng-if="!productos" title="Consultar" legend="Preparando la consulta...">
+    </flex-loading>
+    <!--CONTENT -->
+    <div ng-if="productos">
+        <ion-content>
+            <form name="formulario" novalidate>
+                <div class="list">
+                    <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
+                        <input type="text" placeholder="RUT" ng-model="formulario.rut" required>
+                    </label>
+                    <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
+                        <input type="text" placeholder="Nombre / Razón Social" ng-model="formulario.nombre" required>
+                    </label>
+                    <label class="item item-input item-floating-label"> <span class="input-label">Número de Póliza</span>
+                        <input type="number" placeholder="Número de Póliza" ng-model="formulario.poliza">
+                    </label>
+                    </br>
+                    <div class="input-label">
+                        Estado de la póliza
+                    </div>
+                    <ion-list>
+                        <ion-radio ng-model="formulario.estado" ng-value="'Emitida'">Emitida</ion-radio>
+                        <ion-radio ng-model="formulario.estado" ng-value="'En digitación'">En digitación</ion-radio>
+                    </ion-list>
+                </div>
+                <button class="button button-block button-calm" ng-click="navigateTo(formulario)" ng-disabled="formulario.$invalid">
+                    Aceptar
+                </button>
+            </form>
+        </ion-content>
+    </div>
+</ion-view>

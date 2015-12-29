@@ -27,6 +27,5 @@
   },
   "_source": "git://github.com/danielstern/ngAudio.git",
   "_target": "~1.7.1",
-  "_originalSource": "angular-audio",
-  "_direct": true
+  "_originalSource": "angular-audio"
 }

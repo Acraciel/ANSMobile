@@ -9,8 +9,11 @@
         , 'mocks' //Mocks Only for Testing, Remove in PRD
 
         , 'ngIOS9UIWebViewPatch' //IOS 9 FICKLERING PATCH (https://gist.github.com/IgorMinar/863acd413e3925bf282c)
+        
+        , 'ionic-material' //Material for ionic Alpha
+        , 'ionMdInput' //Input Type Material for Ionic
     ])
-    .run(function($location, $Configuration, $log)
+    .run(function($location, $Configuration, $log,$Identity)
     {
         var application = $Configuration.get("application");
         $log.info("application start... ;)!",
@@ -18,14 +21,19 @@
             env: application.environment,
             version: application.version
         });
-        $location.url("boot");
+        if($Identity.isAuthenticated() ){
+            $location.url("boot");
+        }else{
+            $location.url("security/identity/login");
+        }
+        
     })
     .config(function(mockProvider)
     {
         //Mocking Module (While the API is in Construction)
         mockProvider
-            .enable()
-            .setDelay(700); //Simulate a Short Delay ^^, (More 'Real' experience)
+        .enable()
+        .setDelay(700); //Simulate a Short Delay ^^, (More 'Real' experience)
     })
     
     .config(function(CONFIGURATION)
@@ -41,7 +49,7 @@
     .config(function($ApiProvider)
     {
         //API Base Endpoint
-        var API_ENDPOINT = 'http://valentys.motoApp.com/API/v1';
+        var API_ENDPOINT = 'http://ansmobil.com/API/v1';
         $ApiProvider.setEndpoint(API_ENDPOINT);
     })
     .config(function($IdentityProvider)

@@ -16,7 +16,7 @@ angular.module('app.components')
             $element
         )
         {
-            $scope.spinner = $scope.spinner || "lines";
+            $scope.spinner = $scope.spinner || "bubbles";
         }
     };
 });

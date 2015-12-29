@@ -12,16 +12,21 @@
         <link href='lib/robotodraft/robotodraft.css' rel='stylesheet' type='text/css'>
 
         <!-- bower:css -->
+        <link rel="stylesheet" href="lib/waves/dist/waves.min.css">
         <link rel="stylesheet" href="lib/ionic/css/ionic.css">
         <link rel="stylesheet" href="lib/angular-chart.js/dist/angular-chart.css">
         <link rel="stylesheet" href="lib/ionic-toast/dist/style.css">
+        <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.css">
+        <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.min.css">
         <!-- endinject -->
 
         <!-- inject:css -->
         <link rel="stylesheet" href="bundles/app/css/default.css">
         <link rel="stylesheet" href="bundles/app/css/platform-overrides.css">
+        <link rel="stylesheet" href="bundles/app/css/variables.css">
         <link rel="stylesheet" href="bundles/app/components/flex-loading/css/flex-loading.css">
         <link rel="stylesheet" href="bundles/app/components/preload-image/css/preload-image.css">
+        <link rel="stylesheet" href="views/custoModal/css/custoModal.css">
         <!-- endinject -->
         
         <!-- cordova script (this will be a 404 during development) -->
@@ -40,12 +45,16 @@
         <script src="lib/angular-audio/app/angular.audio.js"></script>
         <script src="lib/angular-ios9-uiwebview-patch/angular-ios9-uiwebview-patch.js"></script>
         <script src="lib/moment/moment.js"></script>
+        <script src="lib/ion-md-input/ion-md-input.js"></script>
+        <script src="lib/waves/dist/waves.min.js"></script>
         <script src="lib/ionic/js/ionic.js"></script>
         <script src="lib/ionic/js/ionic-angular.js"></script>
         <script src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
         <script src="lib/angular-chart.js/dist/angular-chart.js"></script>
         <script src="lib/ionic-toast/dist/ionic-toast.js"></script>
         <script src="lib/angular-moment/angular-moment.js"></script>
+        <script src="lib/ionic-material/dist/ionic.material.js"></script>
+        <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
         <!-- endinject -->
         
         <!-- inject:js -->
@@ -54,21 +63,36 @@
         <script src="bundles/mocks/mocks.js"></script>
         <script src="bundles/mocks/js/angular-mocks.js"></script>
         <script src="bundles/mocks/js/mocks/configuration.js"></script>
+        <script src="bundles/mocks/js/mocks/cotizar.js"></script>
         <script src="bundles/mocks/js/mocks/dashboard.js"></script>
+        <script src="bundles/mocks/js/mocks/ejecutivos.js"></script>
         <script src="bundles/mocks/js/mocks/notifications.js"></script>
+        <script src="bundles/mocks/js/mocks/polizas.js"></script>
         <script src="bundles/mocks/js/mocks/profile.js"></script>
-        <script src="bundles/mocks/js/mocks/routes.js"></script>
         <script src="bundles/mocks/js/mocks/security.js"></script>
+        <script src="bundles/mocks/js/mocks/simulaciones.js"></script>
+        <script src="bundles/app/components/custom-modal/directives/custom-modal.js"></script>
         <script src="bundles/app/components/flex-loading/directives/flex-laoding.js"></script>
         <script src="bundles/app/components/preload-image/directives/preload-image.js"></script>
         <script src="views/boot/index.js"></script>
+        <script src="views/consultarCliente/index.js"></script>
+        <script src="views/consultarPoliza/index.js"></script>
+        <script src="views/consultarSimulaciones/index.js"></script>
+        <script src="views/custoModal/custoModal.js"></script>
+        <script src="views/emitir/index.js"></script>
         <script src="views/error/404.js"></script>
         <script src="views/home/index.js"></script>
         <script src="views/layouts/exception.js"></script>
         <script src="views/layouts/layout.js"></script>
         <script src="views/layouts/no-menu.js"></script>
+        <script src="views/miEjecutivo/index.js"></script>
         <script src="views/notifications/index.js"></script>
         <script src="views/profile/index.js"></script>
+        <script src="views/simular/index.js"></script>
+        <script src="views/consultarCliente/basePolizasCliente/index.js"></script>
+        <script src="views/consultarCliente/baseClientes/index.js"></script>
+        <script src="views/consultarPoliza/constar/index.js"></script>
+        <script src="views/consultarSimulaciones/list/index.js"></script>
         <script src="views/security/identity/login.js"></script>
         <!-- endinject -->
 
@@ -77,7 +101,7 @@
     </head>
 
     <body >
-        <div ui-view ng-cloak md-theme="imoto">
+        <div ui-view ng-cloak md-theme="ans">
         </div>
     </body>
 

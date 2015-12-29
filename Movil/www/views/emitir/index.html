@@ -1,0 +1,21 @@
+<ion-view title="Emitir">
+    <!-- LOADING -->
+    <flex-loading ng-if="!cotizar" title="Consultar" legend="Preparando la consulta...">
+    </flex-loading>
+    <!--CONTENT -->
+    <div ng-if="cotizar">
+        <ion-content>
+            <form name="consultaForm" novalidate>
+                <div class="list">
+                    <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
+                        <input type="text" placeholder="RUT"> </label>
+                    <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
+                        <input type="text" placeholder="Nombre / Razón Social"> </label>
+                </div>
+                <button class="button button-calm button-block" ng-click="navigateTo()">
+                    Aceptar
+                </button>
+            </form>
+        </ion-content>
+    </div>
+</ion-view>

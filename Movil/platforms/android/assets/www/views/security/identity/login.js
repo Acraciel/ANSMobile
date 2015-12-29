@@ -4,8 +4,7 @@ angular.route('security/identity/login', function(
     $Localization,
     $state,
     $Identity,
-    $scope,
-    ionicToast
+    $scope
 )
 {
     //Application Information
@@ -34,14 +33,13 @@ angular.route('security/identity/login', function(
                         error_message = error.error_description;
                     }
 
-                    ionicToast.show(error_message, 'bottom', false, 2500);
+                   
                 });
         };
 
         switch (loginType)
         {
-            case 'facebook':
-            case 'google':
+            case 'ingresar':
             case 'email':
                 email();
                 break;

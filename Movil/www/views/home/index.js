@@ -7,7 +7,6 @@ angular.route('app.home/index', function(
     $timeout,
     $Identity,
     $ionicNavBarDelegate
-
 )
 {
     //----------------------------------------
@@ -17,7 +16,7 @@ angular.route('app.home/index', function(
     {
         $ionicNavBarDelegate.align("left");
         $ionicNavBarDelegate.showBar(true);
-
+        
     }, 350);
     $scope.$on("$destroy", function()
     {
@@ -25,46 +24,12 @@ angular.route('app.home/index', function(
     });
     //----------------------------------------
 
-    //----------------------------------------
-    // Charts Data
-    //  http://jtblin.github.io/angular-chart.js/
-    //  http://www.chartjs.org/docs/
-    var drawGraph = function(data)
-    {
-        var labels = [];
-        var values = [];
-
-        angular.forEach(data.graph, function(item)
-        {
-            labels.push(item.label);
-            values.push(item.value);
-        });
-
-        $scope.graph = {
-            labels: labels,
-            series: ['Stats'],
-            colours: ["#493C2A"],
-            options:
-            {
-                showTooltips: false
-            },
-            onClick: function(points, evt)
-            {
-                console.log(points, evt);
-            },
-            values: [
-                values
-            ]
-        };
-
-    };
 
     //---------------------------------------------------
     // Get Data
     $Api.read("/Dashboard").success(function(data)
     {
         //Set Items to List
-        drawGraph(data);
         $scope.dashboard = data;
 
     });
@@ -75,4 +40,5 @@ angular.route('app.home/index', function(
     {
         $state.go("nomenu.routes/create/start");
     };
+    //test();
 });

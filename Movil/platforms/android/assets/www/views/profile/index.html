@@ -1,6 +1,6 @@
-<ion-view title="Mi Perfil" class="profile">
+<ion-view title="Perfil" class="profile">
     <!-- LOADING -->
-    <flex-loading ng-if="!profile" title="Recopilando Información..." legend="solo queremos saber ti ^^">
+    <flex-loading ng-if="!profile" title="Recopilando Información..." legend="Obteniendo datos...">
     </flex-loading>
     <!-- CONTENT -->
     <div ng-if="profile">
@@ -24,41 +24,27 @@
                         <!-- STATS -->
                         <div class="row no-padding">
                             <div class="col no-padding">
-                                <div class="title">
-                                    Total Recorrido
+                                <div class="name">
+                                    {{ profile.name }}
                                 </div>
-                                <div class="counter">
-                                    {{ profile.resume.distance.total | currency : '' : 1}} km
+                                <div class="rol">
+                                    {{ profile.rol }}
                                 </div>
-                                <div class="category">
-                                    {{ profile.type.name }}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="progress">
-                                <div style="width:53%">
+                                <div class="email">
+                                    {{ profile.email }}
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col follower col-33">
-                        <span>{{ profile.following }}</span> Siguiendo
-                    </div>
-                    <div class="col following col-offset-5">
-                        <span>{{ profile.followers }}</span> Seguidores
                     </div>
                 </div>
             </div>
-            <!-- BANNER -->
-            <div class="row average">
+            <!-- INFO -->
+            <div class="row">
                 <div class="col">
-                    Distancia Promedio
+                    Dirección
                 </div>
                 <div class="col col-33">
-                    {{ profile.resume.distance.average | currency : '' : 1}} km
+                    {{ profile.direccion}}
                 </div>
             </div>
         </ion-content>

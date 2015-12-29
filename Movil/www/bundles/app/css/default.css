@@ -1,71 +1,378 @@
-[md-theme='imoto'] ion-side-menu ion-content .profile-bubble {
-      margin-top: 44px;
-      padding-bottom: 1.5em; }
-      [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.marker {
-        width: 7.5em;
-        height: 7.5em; }
-        [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.marker > div.halo {
-          border-radius: 50%;
-          border: 1px solid #c0c1c2;
-          width: 100%;
-          height: 100%;
-          padding: 5%; }
-          [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.marker > div.halo > div {
+/*------------------------------------------------------
+ Description:       Ionic ANS Style's
+------------------------------------------------------*/
+/*-------------------------
+    IONIC OVERRIDES 
+-------------------------*/
+* {
+  font-family: robotoDraft; }
+
+.no-padding {
+  padding: 0px; }
+
+.col-offset-5 {
+  margin-left: 5%; }
+
+.box-shadow-3dp, [md-theme='ans'] ion-view.pane.notifications ion-content ion-item {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12); }
+
+.box-shadow-8dp, .fab-button {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); }
+
+.grayscale, [md-theme='ans'] ion-footer-bar > button.button-block[disabled] {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  /* Firefox 10+, Firefox on Android */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */ }
+
+.fab-button {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 3.5em;
+  height: 3.5em;
+  font-size: 1em;
+  border-radius: 50%;
+  z-index: 9999; }
+  .fab-button > i.icon {
+    font-size: 150%; }
+  .fab-button.top {
+    top: 20px; }
+  .fab-button.bottom {
+    bottom: 16px; }
+  .fab-button.right {
+    right: 16px; }
+  .fab-button.left {
+    left: 16px; }
+
+/*-----------------------------
+    IONIC MATERIAL OVERRIDES 
+------------------------------*/
+.item-md-label > input {
+  background-color: #FFFFFF;
+  color: #7B3BA8; }
+.item-md-label .input-label {
+  color: #DF9443; }
+
+/*------------------------------------------------------
+    Ans Theme
+------------------------------------------------------*/
+[md-theme='ans'] {
+  /* 
+      SASS Theme Variables 
+  */
+  color: #484848;
+  /*-------------------------
+      OVERRIDE'S
+   -------------------------*/
+  /*-------------------------
+      HEADER BAR'S 
+   -------------------------*/
+  /*-------------------------
+      FOOTER BAR'S 
+   -------------------------*/
+  /*-------------------------
+      CONTENT
+   -------------------------*/
+  /*------------------------- 
+      SIDE BAR MENU
+   -------------------------*/
+  /*------------------------------------------------------
+      SPECIFIC VIEW'S
+  ------------------------------------------------------*/
+  /*------------------------- 
+  VIEW:   Login page
+  ROUTE:  /app/security/identity
+  -------------------------*/ }
+  [md-theme='ans'] .fab-button {
+    background: #FFFFFF; }
+  [md-theme='ans'] ion-header-bar {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+    [md-theme='ans'] ion-header-bar button {
+      color: #484848 !important; }
+    [md-theme='ans'] ion-header-bar .title {
+      margin-left: -20px;
+      color: #DF9443; }
+    [md-theme='ans'] ion-header-bar button.notification {
+      margin-top: -1px;
+      padding: 4px 15px 0px 0px; }
+    [md-theme='ans'] ion-header-bar button.profile {
+      margin-top: -1px; }
+    [md-theme='ans'] ion-header-bar span.badge {
+      margin-left: 26px;
+      margin-top: -16px;
+      padding: 2px 7px 2px 7px; }
+  [md-theme='ans'] .has-footer {
+    bottom: 60px; }
+  [md-theme='ans'] ion-footer-bar {
+    padding: 10px;
+    height: 65px;
+    background-image: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    /*Sobre escribe clase de Material ionic*/ }
+    [md-theme='ans'] ion-footer-bar > .button {
+      min-width: 190px; }
+    [md-theme='ans'] ion-footer-bar > button.button-block {
+      text-align: center;
+      color: #7B3BA8;
+      background: none;
+      background-color: #FFFFFF;
+      border-color: #FFFFFF;
+      margin: 0em 7em;
+      text-transform: uppercase;
+      font-size: 0.73em;
+      border-radius: 0px; }
+      [md-theme='ans'] ion-footer-bar > button.button-block > i.icon {
+        color: #DF9443; }
+  [md-theme='ans'] ion-view {
+    background-color: #FFFFFF; }
+    [md-theme='ans'] ion-view ion-content {
+      background-color: #FFFFFF; }
+  [md-theme='ans'] ion-side-menu {
+    background-color: #FFFFFF;
+    /*------------------------- 
+    SIDE BAR MENU
+    -------------------------*/ }
+    [md-theme='ans'] ion-side-menu ion-content .profile-menu {
+      margin-top: 20px; }
+      [md-theme='ans'] ion-side-menu ion-content .profile-menu img {
+        width: 40%; }
+      [md-theme='ans'] ion-side-menu ion-content .profile-menu div.name {
+        padding-top: 0.5em;
+        color: #DF9443; }
+      [md-theme='ans'] ion-side-menu ion-content .profile-menu div.rol {
+        color: #7B3BA8; }
+      [md-theme='ans'] ion-side-menu ion-content .profile-menu button {
+        font-size: 11px; }
+    [md-theme='ans'] ion-side-menu ion-content ion-list ion-item {
+      background-color: transparent;
+      border: #fff;
+      font-weight: bold;
+      color: rgba(68, 68, 68, 0.81); }
+      [md-theme='ans'] ion-side-menu ion-content ion-list ion-item i {
+        color: #AAAAAB; }
+      [md-theme='ans'] ion-side-menu ion-content ion-list ion-item span {
+        padding-left: 0.5em; }
+      [md-theme='ans'] ion-side-menu ion-content ion-list ion-item.active {
+        background-color: #FFF; }
+        [md-theme='ans'] ion-side-menu ion-content ion-list ion-item.active span {
+          color: #7B3BA8; }
+        [md-theme='ans'] ion-side-menu ion-content ion-list ion-item.active i {
+          color: #DF9443; }
+    [md-theme='ans'] ion-side-menu ion-footer-bar {
+      text-align: center;
+      color: #484848;
+      background: none;
+      padding: 0px;
+      opacity: 0.6; }
+  [md-theme='ans'] ion-view.pane {
+    /*------------------------- 
+    VIEW:   Notification Page
+    ROUTE:  /app/notifications
+    -------------------------*/
+    /*------------------------- 
+    VIEW:   Profile Account Page
+    ROUTE:  /app/profile
+    -------------------------*/
+    /*------------------------- 
+    VIEW:   Constar page
+    ROUTE:  /app/constar
+    -------------------------*/
+    /*------------------------- 
+    VIEW:   Boot page
+    ROUTE:  /app/boot
+    -------------------------*/ }
+    [md-theme='ans'] ion-view.pane .module-title {
+      margin-left: 15px; }
+      [md-theme='ans'] ion-view.pane .module-title h1 {
+        font-size: 24px;
+        color: #DF9443; }
+      [md-theme='ans'] ion-view.pane .module-title h2 {
+        font-size: 18px;
+        color: #484848;
+        font-weight: 200; }
+    [md-theme='ans'] ion-view.pane.notifications ion-content {
+      background: transparent; }
+      [md-theme='ans'] ion-view.pane.notifications ion-content ion-item {
+        border-radius: 2px;
+        margin: 0.5em 0.5em 0em 0.5em;
+        padding-bottom: 8px;
+        margin-top: 0.6em; }
+        [md-theme='ans'] ion-view.pane.notifications ion-content ion-item:first-child {
+          margin-top: 1em; }
+        [md-theme='ans'] ion-view.pane.notifications ion-content ion-item > div.information {
+          min-height: 55px; }
+          [md-theme='ans'] ion-view.pane.notifications ion-content ion-item > div.information p {
+            font-size: 0.8em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 1.2em;
+            white-space: normal; }
+          [md-theme='ans'] ion-view.pane.notifications ion-content ion-item > div.information h2 {
+            margin-right: 27px;
+            font-size: 0.9em; }
+          [md-theme='ans'] ion-view.pane.notifications ion-content ion-item > div.information preload-image:first-child {
+            top: 20px;
+            left: 16px;
+            max-width: 40px;
+            max-height: 40px;
             border-radius: 50%;
             overflow: hidden;
-            height: 100%;
-            width: 100%;
-            background: #1c1c29; }
-            [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.marker > div.halo > div > img {
-              width: 100%; }
-      [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.name {
-        padding-top: 0.5em; }
-      [md-theme='imoto'] ion-side-menu ion-content .profile-bubble div.description {
-        color: #270; }
-
-
-
-
-        [md-theme='imoto'] ion-view.pane.profile {
+            position: absolute; }
+    [md-theme='ans'] ion-view.pane.profile {
       /*
           CLOSE SESSION
-      */
-      /*
-          AVERAGE DISTANCE 
       */ }
-      [md-theme='imoto'] ion-view.pane.profile div.stats {
+      [md-theme='ans'] ion-view.pane.profile div.stats {
         padding-top: 1em;
         /*
             TWITTER LIKE
         */ }
-        [md-theme='imoto'] ion-view.pane.profile div.stats .profile-bubble {
+        [md-theme='ans'] ion-view.pane.profile div.stats .profile-bubble {
           padding-bottom: 0.5em; }
-          [md-theme='imoto'] ion-view.pane.profile div.stats .profile-bubble div.marker {
+          [md-theme='ans'] ion-view.pane.profile div.stats .profile-bubble div.marker {
             width: 7em;
             height: 7em; }
-            [md-theme='imoto'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo {
+            [md-theme='ans'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo {
               border-radius: 50%;
               border: 1px solid #c0c1c2;
               width: 100%;
               height: 100%;
               padding: 5%; }
-              [md-theme='imoto'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo > div {
+              [md-theme='ans'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo > div {
                 border-radius: 50%;
                 overflow: hidden;
                 height: 100%;
                 width: 100%;
-                background: #1c1c29; }
-                [md-theme='imoto'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo > div > img {
+                background: #FFFFFF; }
+                [md-theme='ans'] ion-view.pane.profile div.stats .profile-bubble div.marker > div.halo > div > img {
                   width: 100%; }
-        [md-theme='imoto'] ion-view.pane.profile div.stats .name {
+        [md-theme='ans'] ion-view.pane.profile div.stats .title {
           font-size: 1.2em;
           padding-left: 0.6em;
           padding-bottom: 5px; }
-        [md-theme='imoto'] ion-view.pane.profile div.stats .rol {
-          font-size: 1.2em;          
+        [md-theme='ans'] ion-view.pane.profile div.stats .counter {
+          color: #FFFFFF;
+          font-size: 1.7em;
+          font-weight: bold;
           padding-left: 0.6em;
           padding-bottom: 5px; }
-        [md-theme='imoto'] ion-view.pane.profile div.stats .email {
+        [md-theme='ans'] ion-view.pane.profile div.stats .category {
           padding-left: 0.8em; }
-        
+        [md-theme='ans'] ion-view.pane.profile div.stats .progress {
+          margin-top: 2em;
+          background-color: #fff;
+          height: 6px;
+          width: 90%;
+          border-radius: 3px;
+          overflow: hidden;
+          margin-left: 0.4em; }
+          [md-theme='ans'] ion-view.pane.profile div.stats .progress > div {
+            height: 100%;
+            background-color: #369afc; }
+        [md-theme='ans'] ion-view.pane.profile div.stats .follower,
+        [md-theme='ans'] ion-view.pane.profile div.stats .following {
+          padding-left: 1em;
+          color: #B7B7B7;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          white-space: nowrap; }
+          [md-theme='ans'] ion-view.pane.profile div.stats .follower > span,
+          [md-theme='ans'] ion-view.pane.profile div.stats .following > span {
+            font-weight: bold;
+            color: #484848;
+            padding-right: 3px;
+            white-space: nowrap; }
+      [md-theme='ans'] ion-view.pane.profile button.close-session {
+        color: #484848;
+        background: transparent;
+        border: none; }
+        [md-theme='ans'] ion-view.pane.profile button.close-session > i {
+          color: #484848;
+          padding-right: 10px; }
+        [md-theme='ans'] ion-view.pane.profile button.close-session > span {
+          font-size: 0.8em;
+          text-transform: uppercase; }
+    [md-theme='ans'] ion-view.pane.constar .panel {
+      margin: 20px 15px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+      [md-theme='ans'] ion-view.pane.constar .panel .panel-head {
+        padding: 0.5em 0em 0.5em 0.2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+        color: #7B3BA8; }
+      [md-theme='ans'] ion-view.pane.constar .panel .panel-body {
+        padding: 0.5em; }
+        [md-theme='ans'] ion-view.pane.constar .panel .panel-body span {
+          color: #AAAAAB; }
+        [md-theme='ans'] ion-view.pane.constar .panel .panel-body .content {
+          padding-top: 0.7em;
+          padding-bottom: 0.7em;
+          color: #484848;
+          font-weight: bold; }
+        [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble {
+          padding-bottom: 0.5em; }
+          [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker {
+            width: 7em;
+            height: 7em; }
+            [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo {
+              border-radius: 10%;
+              border: 2px solid #c0c1c2;
+              width: 100%;
+              height: 100%;
+              padding: 5%; }
+              [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo > div {
+                border-radius: 50%;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+                background: #FFFFFF; }
+                [md-theme='ans'] ion-view.pane.constar .panel .panel-body > .profile-bubble div.marker > div.halo > div > img {
+                  width: 100%; }
+      [md-theme='ans'] ion-view.pane.constar .panel .panel-footer {
+        padding: 0.7em 0em 0.7em 0em;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        text-align: right;
+        color: #7B3BA8; }
+        [md-theme='ans'] ion-view.pane.constar .panel .panel-footer span {
+          padding-right: 1em; }
+    [md-theme='ans'] ion-view.pane.boot {
+      top: 35%; }
+      [md-theme='ans'] ion-view.pane.boot > center > logo {
+        display: block;
+        height: 8em;
+        width: 15em; }
+      [md-theme='ans'] ion-view.pane.boot > center > .spinner svg {
+        width: 10em;
+        height: 4em;
+        stroke: #7B3BA8;
+        fill: #7B3BA8; }
+  [md-theme='ans'] .login > center > form > div > button {
+    width: 15.3em; }
+  [md-theme='ans'] logo {
+    background-image: url(../css/images/ans-logo.jpg);
+    background-size: 100%;
+    height: 3em;
+    width: 6em;
+    margin-bottom: 1em;
+    background-repeat: no-repeat; }
+    [md-theme='ans'] logo.header {
+      background-image: url(../css/images/ans-logo-header.png); }
+    [md-theme='ans'] logo.login {
+      display: block;
+      margin-top: 4em;
+      height: 7em;
+      width: 16em; }
+
 /*# sourceMappingURL=default.css.map */

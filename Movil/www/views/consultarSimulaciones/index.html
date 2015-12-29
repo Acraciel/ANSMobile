@@ -1,0 +1,35 @@
+<ion-view title="Consulta Simulaciones">
+    <!-- LOADING -->
+    <flex-loading ng-if="!cotizar" title="Consultar" legend="Preparando la consulta...">
+    </flex-loading>
+    <!--CONTENT -->
+    <div ng-if="cotizar">
+        <ion-content>
+            <form name="simulaForm" novalidate>
+                <div class="list">
+                    <label class="item item-input item-floating-label"> <span class="input-label">Número de Simulación</span>
+                        <input type="number" ng-model="form.nroSimulacion" placeholder="Número de Simulación" required>
+                    </label>
+                    <label class="item item-input item-floating-label"> <span class="input-label">RUT</span>
+                        <input type="text" ng-model="form.rut" placeholder="RUT">
+                    </label>
+                    <label class="item item-input item-floating-label"> <span class="input-label">Nombre / Razón Social</span>
+                        <input type="text" ng-model="form.nombre" placeholder="Nombre / Razón Social">
+                    </label>
+                    </br>
+                    <div class="input-label">
+                        Ramo
+                    </div>
+                    <ion-list>
+                        <ion-radio ng-model="form.ramo" ng-value="0">HOGAR</ion-radio>
+                        <ion-radio ng-model="form.ramo" ng-value="1">VIAJE</ion-radio>
+                        <ion-radio ng-model="form.ramo" ng-value="2">VEHÍCULO</ion-radio>
+                    </ion-list>
+                </div>
+                <button class="button button-calm button-block" ng-click="navigateTo()" ng-disabled="simulaForm.$invalid">
+                    Aceptar
+                </button>
+            </form>
+        </ion-content>
+    </div>
+</ion-view>
