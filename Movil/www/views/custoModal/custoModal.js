@@ -25,7 +25,7 @@
             // Mode - Do Magic
             $scope.close = function()
             {
-                modal.hide();
+                modal.remove();
             };
 
         });
@@ -55,7 +55,7 @@
                             email: emailUserDefault
                         };
                         //SHOW REWARD PANE
-                        $ionicModal.fromTemplateUrl('views/CustoModal/CustoModal.html',
+                        $ionicModal.fromTemplateUrl('views/custoModal/custoModal.html',
                         {
                             animation: 'slide-in-up'
                         }).then(function(modalDialog)
