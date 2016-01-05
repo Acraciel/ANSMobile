@@ -25,7 +25,7 @@
             // Mode - Do Magic
             $scope.close = function()
             {
-                modal.hide();
+                modal.remove();
             };
 
         });
