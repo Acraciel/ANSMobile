@@ -55,7 +55,7 @@
                             email: emailUserDefault
                         };
                         //SHOW REWARD PANE
-                        $ionicModal.fromTemplateUrl('views/CustoModal/CustoModal.html',
+                        $ionicModal.fromTemplateUrl('views/custoModal/custoModal.html',
                         {
                             animation: 'slide-in-up'
                         }).then(function(modalDialog)
